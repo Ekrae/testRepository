@@ -1,12 +1,24 @@
-package week04;
+package week05;
 
 public class TV {
     public boolean power;
     public int channel;
 
+    public TV(boolean power, int channel) {
+        this.power = power;
+        this.channel = channel;
+    }
     public final int MIN_CHANNEL = 0;
     public int[] hopeChannels = {5,7,9,11,15,22};
     public final int MAX_CHANNEL = hopeChannels.length-1;
+
+    public TV(TV tv) {
+        this(tv.power,tv.channel);
+    }
+    public TV(){
+
+    }
+
     public void powerOnOff(){
         power = !power;  //바뀌는 식!
         showTV();
