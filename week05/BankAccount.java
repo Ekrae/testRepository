@@ -23,7 +23,7 @@ public class BankAccount {
     }
     public void withdraw(double amount){
         if (this.accountBalance>=amount){
-            this.accountBalance=-amount;
+            this.accountBalance -= amount;
         }else{
             System.out.println("잔액부족");
         }
@@ -44,3 +44,4 @@ public class BankAccount {
         System.out.println("=".repeat(20));
     }
 }
+
