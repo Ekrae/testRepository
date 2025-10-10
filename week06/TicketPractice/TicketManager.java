@@ -37,7 +37,8 @@ public class TicketManager {
     public String toString() {
         String str = "공연명 : " + this.name;
         str += "\n좌석수 : " + this.NUMBER;
-        str += "\n 총 판매티켓 수 : "+ this.count + "\n";
+        str += "\n총 판매티켓 수 : "+ this.count + "\n";
+        str += "\n =========== \n";
         for (Ticket ticket : tickets){
             if (ticket != null){
                 str += ticket.toString();
@@ -48,4 +49,29 @@ public class TicketManager {
         str += "총 판매 금액 : "+ this.getTotal() + "\n";
         return str;
     }
+
+    public void showGeneralTicket(boolean payByCredit){
+        for (Ticket ticket : tickets){
+            if (ticket != null && ticket instanceof GeneralTicket){
+                GeneralTicket t = (GeneralTicket)ticket;
+                if (t.isPayByCredit()==payByCredit){
+                    System.out.println(t);
+                }
+            }
+        }
+    }
+    //advance티켓이 사전티켓인가봄? 그럼 20일 이전에 예약한 티켓이면 20 이상? 초과?
+    public void showAdvanceTicket(int advanceDays){
+        for (Ticket ticket : tickets){
+            if (ticket instanceof AdvanceTicket){
+                AdvanceTicket t = (AdvanceTicket)ticket;
+                if (t.getAdvanceDays()>=advanceDays){
+                    System.out.println(t);
+                }
+
+            }
+        }
+    }
+
 }
+

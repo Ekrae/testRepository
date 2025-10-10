@@ -3,26 +3,15 @@ package week06.TicketPractice;
 public class TestMain {
     public static void main(String[] args) {
         TicketManager ticketManager = new TicketManager("방탄콘서트",100);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ticketManager.register(new Ticket(1,1000));
+        ticketManager.register(new GeneralTicket(2,2000,true));
+        ticketManager.register(new GeneralTicket(3,3000,false));
+        ticketManager.register(new AdvanceTicket(4,3000,35));
+        ticketManager.register(new GeneralTicket(5,2000,true));
+        ticketManager.register(new AdvanceTicket(6,3000,15));
+        //System.out.println(ticketManager);
+        ticketManager.showGeneralTicket(true);
+        ticketManager.showAdvanceTicket(20);
 
 
 
