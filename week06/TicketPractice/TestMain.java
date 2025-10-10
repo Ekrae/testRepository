@@ -2,6 +2,7 @@ package week06.TicketPractice;
 
 public class TestMain {
     public static void main(String[] args) {
+        System.out.println("202511492 이창민");
         TicketManager ticketManager = new TicketManager("방탄콘서트",100);
         ticketManager.register(new Ticket(1,1000));
         ticketManager.register(new GeneralTicket(2,2000,true));
