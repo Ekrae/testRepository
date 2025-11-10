@@ -57,7 +57,7 @@ public class VocManager {
         System.out.print("검색할 부분 단어를 입력하세요 (영단어) : ");
         String sWord = scan.nextLine();
         for (Word W : voc){
-            if (W.eng.contains(sWord)){
+            if (W.eng.indexOf(sWord) == 0){
                 System.out.println(W.eng+" : "+ W.kor);
             }
         }
