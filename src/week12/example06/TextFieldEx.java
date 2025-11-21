@@ -1,0 +1,27 @@
+package week12.example06;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class TextFieldEx extends JFrame {
+    TextFieldEx(){
+        setTitle("텍스트 필드 만들기 예제");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container c = getContentPane();
+        c.setLayout(new FlowLayout());
+
+        c.add(new JLabel("이름 "));
+        c.add(new JTextField(20)); //안에 들어가는 int: 문자 박스 크기
+        c.add(new JLabel("학과 "));
+        c.add(new JTextField("화학공학과",20));
+        c.add(new JLabel("주소 "));
+        c.add(new JTextField("수원시...",20));
+
+        setSize(300,150);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new TextFieldEx();
+    }
+}

@@ -18,6 +18,6 @@ public class MainFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        new week12.MainFrame("20000 홍길동");
+        new week12.LabWork.MainFrame("20000 홍길동");
     }
 }
