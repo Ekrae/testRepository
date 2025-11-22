@@ -1,6 +1,4 @@
-package week12.LabWork;
-
-import com.sun.tools.javac.Main;
+package week12.LabWork.Week12_1;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -11,8 +9,6 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Stack;
-import java.util.concurrent.ForkJoinPool;
 
 public class MainFrame extends JFrame {
     Container frame = getContentPane();

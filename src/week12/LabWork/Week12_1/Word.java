@@ -1,4 +1,4 @@
-package week12.LabWork;
+package week12.LabWork.Week12_1;
 
 public class Word {
 	String eng;

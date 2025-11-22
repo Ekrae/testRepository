@@ -1,4 +1,4 @@
-package week12.LabWork;
+package week12.LabWork.Week12_1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
