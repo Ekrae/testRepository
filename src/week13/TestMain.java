@@ -19,10 +19,11 @@ class StdComparator implements Comparator<Student>{
             case 1->{return o1.sid.compareTo(o2.sid)*-1;}
             case 2->{return o1.score-o2.score;}
             case 3->{return (o1.score-o2.score)*-1;}
-            case 4->{return o1.name.compareTo(o2.name);}
-            case 5->{return o1.name.compareTo(o2.name)*-1;}
+
+            default->{return o1.name.compareTo(o2.name);}
+
         }
-        return 0;
+
     }
 }
 
@@ -36,15 +37,23 @@ public class TestMain {
         list.add(new Student("강기로","240",43));
         Collections.shuffle(list);
         System.out.println(list);
-        Collections.sort(list, new StdComparator(3) {
-        });
+        Collections.sort(list,new StdComparator(0));
+        System.out.println(list);
+        int index =
+                Collections.binarySearch(list,
+                    new Student("","240",0),
+                    new StdComparator(0));
+        if (index!=-1){
+            System.out.println(index);
+        }
 
 
 
 
 
 
-
+//        Collections.sort(list, new StdComparator(3) {
+//        });
         //Collections.sort(list);  //==? 이름순 오름차순
 
 //        Collections.sort(list, new Comparator<Student>() {

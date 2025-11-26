@@ -6,7 +6,7 @@ public class Student implements Comparable<Student> {
     int score;
 
     public Student(String name) {
-        this(name,"noInfo",0);
+        this(name,"",0);
     }
 
     public Student(String name, String sid, int score) {
